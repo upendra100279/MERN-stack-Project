@@ -8,8 +8,12 @@ const cors=require('cors')
 const app=express()
 app.use(express.json());
 app.use(cors({
-    origin:"http://localhost:5173",
-    credentials:true
+    origin: [
+        "https://mern-stack-project-heg6.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:5174"
+    ],
+    credentials: true
 }))
 app.use(cookieParser());
 
